@@ -117,7 +117,6 @@
     text-decoration:none;
   }
   
-  /* Company Logo */
   .nav-logo {
     height: 45px;
     width: auto;
@@ -216,7 +215,6 @@
     padding: 120px 0 80px;
   }
 
-  /* Radial glow */
   #home::before {
     content:'';
     position:absolute;
@@ -234,7 +232,6 @@
     pointer-events:none;
   }
 
-  /* Thin vertical accent line */
   .hero-line {
     position:absolute; left:50%; top:0; bottom:0;
     width:1px;
@@ -856,9 +853,10 @@
 <body>
 
 <div id="preloader">
-  <div class="pre-monogram">CA</div>
-  <div class="pre-line"></div>
-  <div class="pre-sub">Poly John & Company</div>
+  <div class="pre-sub" style="animation: preAppear 0.8s ease 0.3s forwards; margin-top: 0; color: var(--white); font-size: 0.85rem;">Poly John & Company</div>
+  <div class="pre-sub" style="animation: preAppear 0.8s ease 1.2s forwards; margin-top: 15px; margin-bottom: 10px; font-size: 0.6rem; color: var(--gold2); letter-spacing: 0.4em;">WISHES YOU A</div>
+  <div class="pre-monogram" style="animation: preAppear 0.8s ease 2.2s forwards; font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: 0.15em; text-align: center;">HAPPY EASTER</div>
+  <div class="pre-line" style="animation: preLine 1s ease 3.2s forwards; margin-top: 25px;"></div>
 </div>
 
 <nav id="navbar">
@@ -1152,13 +1150,13 @@
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Preloader
+  // Preloader (Set to 5 seconds / 5000ms for Easter Special)
   window.addEventListener('load', () => {
     setTimeout(() => {
       const pre = document.getElementById('preloader');
       pre.style.opacity = '0';
       setTimeout(() => { pre.style.display = 'none'; }, 900);
-    }, 2600);
+    }, 5000); 
   });
 
   // Navbar scroll
