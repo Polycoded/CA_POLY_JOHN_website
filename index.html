@@ -9,7 +9,7 @@
 <style>
   /* ============================================================
      ROOT & RESET
-  ============================================================ */
+  ================================================================ */
   :root {
     --bg:        #080b10;
     --bg2:       #0d1219;
@@ -41,7 +41,7 @@
 
   /* ============================================================
      GRAIN OVERLAY
-  ============================================================ */
+  ================================================================ */
   body::before {
     content:'';
     position:fixed;
@@ -54,7 +54,7 @@
 
   /* ============================================================
      PRELOADER
-  ============================================================ */
+  ================================================================ */
   #preloader {
     position:fixed; inset:0;
     background:var(--bg);
@@ -94,7 +94,7 @@
 
   /* ============================================================
      NAVBAR
-  ============================================================ */
+  ================================================================ */
   nav {
     position:fixed; top:0; left:0; width:100%;
     z-index:1000;
@@ -207,7 +207,7 @@
 
   /* ============================================================
      HERO
-  ============================================================ */
+  ================================================================ */
   #home {
     min-height:100vh;
     display:flex; align-items:center;
@@ -339,12 +339,12 @@
   }
 
   /* Hero right panel */
-  .hero-right { display:flex; flex-direction:column; align-items:flex-end; gap:24px; }
+  .hero-right { display:flex; flex-direction:column; align-items:flex-end; gap:32px; }
 
   .hero-badge-main {
     background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02));
     border:1px solid rgba(201,168,76,0.25);
-    padding:40px;
+    padding:50px;
     width:100%;
     position:relative;
     overflow:hidden;
@@ -353,7 +353,7 @@
     content:'CA';
     position:absolute; top:-20px; right:20px;
     font-family:var(--font-disp);
-    font-size:8rem; font-weight:700;
+    font-size:9rem; font-weight:700;
     color:rgba(201,168,76,0.04);
     letter-spacing:-0.05em;
     line-height:1;
@@ -373,8 +373,8 @@
   .hbm-info { flex: 1; }
   
   .hbm-photo {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--gold);
@@ -383,18 +383,18 @@
   }
 
   .hbm-label {
-    font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase;
-    color:var(--gold); margin-bottom:14px;
+    font-size:0.75rem; letter-spacing:0.3em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:16px;
   }
   .hbm-name {
     font-family:var(--font-disp);
-    font-size:1.9rem; font-weight:600;
+    font-size:2.4rem; font-weight:600;
     color:var(--white); line-height:1.2;
-    margin-bottom:4px;
+    margin-bottom:6px;
   }
   .hbm-cred {
     font-family:var(--font-disp);
-    font-size:1rem; font-style:italic;
+    font-size:1.1rem; font-style:italic;
     color:var(--gold);
   }
   .hbm-divider {
@@ -402,7 +402,7 @@
     background:linear-gradient(to right, var(--gold), transparent);
     margin-bottom:20px;
   }
-  .hbm-desc { font-size:0.88rem; color:var(--text); line-height:1.7; position: relative; z-index: 2;}
+  .hbm-desc { font-size:1rem; color:var(--text); line-height:1.8; position: relative; z-index: 2;}
 
   .hero-stat-row {
     display:grid; grid-template-columns:1fr 1fr;
@@ -434,7 +434,7 @@
 
   /* ============================================================
      SECTION COMMONS
-  ============================================================ */
+  ================================================================ */
   .section { padding:100px 0; }
   .section.dark { background:var(--bg2); }
   .s-inner { max-width:1200px; margin:0 auto; padding:0 40px; }
@@ -464,7 +464,7 @@
 
   /* ============================================================
      ABOUT
-  ============================================================ */
+  ================================================================ */
   .about-grid {
     display:grid; grid-template-columns:1fr 1.3fr;
     gap:80px; align-items:center;
@@ -518,12 +518,13 @@
 
   /* ============================================================
      SERVICES
-  ============================================================ */
+  ================================================================ */
   .services-header {
-    display:grid; grid-template-columns:1fr 1fr;
-    gap:60px; align-items:end; margin-bottom:60px;
+    max-width: 650px; margin-bottom: 60px;
   }
-  .services-desc { font-size:1rem; color:var(--text); line-height:1.8; }
+  .services-header p {
+    font-size:1rem; color:var(--text); line-height:1.8; margin-top:16px;
+  }
 
   .services-grid {
     display:grid;
@@ -574,7 +575,7 @@
 
   /* ============================================================
      CLIENTS
-  ============================================================ */
+  ================================================================ */
   .clients-intro {
     max-width:600px; margin-bottom:70px;
   }
@@ -582,7 +583,7 @@
 
   .clients-row {
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap:24px;
   }
 
@@ -630,7 +631,7 @@
 
   /* ============================================================
      CONTACT
-  ============================================================ */
+  ================================================================ */
   .contact-grid {
     display:grid; grid-template-columns:1fr 1fr;
     gap:2px;
@@ -721,7 +722,7 @@
 
   /* ============================================================
      FOOTER
-  ============================================================ */
+  ================================================================ */
   footer {
     background:var(--bg);
     border-top:1px solid var(--border);
@@ -745,7 +746,7 @@
 
   /* ============================================================
      SCROLL REVEAL
-  ============================================================ */
+  ================================================================ */
   .reveal {
     opacity:0; transform:translateY(36px);
     transition:opacity 0.9s cubic-bezier(0.2,0,0.1,1), transform 0.9s cubic-bezier(0.2,0,0.1,1);
@@ -770,12 +771,11 @@
 
   /* ============================================================
      RESPONSIVE
-  ============================================================ */
+  ================================================================ */
   @media(max-width:1024px){
     .hero-inner { grid-template-columns:1fr; gap:48px; }
     .hero-right { align-items:stretch; }
     .about-grid { grid-template-columns:1fr; gap:40px; }
-    .services-header { grid-template-columns:1fr; gap:20px; }
     .clients-row { grid-template-columns:1fr; max-width:500px; }
     .contact-grid { grid-template-columns:1fr; }
   }
@@ -838,13 +838,13 @@
     <div class="hero-left">
       <div class="hero-eyebrow"><span>Chartered Accountants · Est. 2010</span></div>
       <h1 class="hero-h1">
-        <em>Trusted</em> Financial<br>
-        <strong>& Tax Advisory</strong>
+        <em>Chartered</em> Accountancy<br>
+        <strong>Services</strong>
       </h1>
       <p class="hero-desc">
-        Professional excellence and trusted financial solutions
+        Providing accounting, auditing and taxation services
         <span class="hl">since November 2010</span>.
-        Serving individuals, firms and corporations across Kerala with integrity.
+        Serving individuals, firms and companies.
       </p>
       <div class="hero-ctas">
         <a href="#services" class="btn-gold">Our Services</a>
@@ -864,9 +864,8 @@
         </div>
         <div class="hbm-divider"></div>
         <div class="hbm-desc">
-          Over 15 years leading Poly John & Company with an unwavering
-          commitment to financial integrity, regulatory excellence, and
-          client prosperity.
+          Over 15 years of experience in providing professional services
+          in accounting, auditing, and taxation for diverse entities.
         </div>
       </div>
 
@@ -876,16 +875,8 @@
           <div class="hs-label">Years of Practice</div>
         </div>
         <div class="hero-stat">
-          <div class="hs-num">7</div>
+          <div class="hs-num">6</div>
           <div class="hs-label">Core Services</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hs-num">100<span style="font-size:1.4rem">%</span></div>
-          <div class="hs-label">Compliance Rate</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hs-num">3<span style="font-size:1.4rem">+</span></div>
-          <div class="hs-label">Major Corporates</div>
         </div>
       </div>
     </div>
@@ -897,13 +888,13 @@
   <div class="s-inner">
     <div class="reveal">
       <div class="s-eyebrow"><span>About the Firm</span></div>
-      <h2 class="s-title">A Legacy of <em>Financial Integrity</em></h2>
+      <h2 class="s-title">A Legacy of <em>Professional Service</em></h2>
     </div>
     <div class="about-grid">
       <div class="about-left reveal-left delay-1">
         <div class="about-num-block">
           <span class="about-big-num">15</span>
-          <div class="about-big-text">Years of Excellence</div>
+          <div class="about-big-text">Years of Experience</div>
           <div class="about-big-sub">November 2010 — Present</div>
         </div>
         <div class="about-pillars">
@@ -915,18 +906,16 @@
       </div>
       <div class="about-right reveal-right delay-2">
         <p>
-          Established in <span class="gold">November 2010</span>, Poly John & Company has
-          been a pillar of financial integrity and expert advisory for over fifteen years.
+          Established in <span class="gold">November 2010</span>, Poly John & Company
+          has been providing professional services in accounting, auditing and taxation for over fifteen years.
         </p>
         <p>
-          Based in Thodupuzha, Kerala, our firm specialises in comprehensive accounting,
-          auditing, and taxation services — meticulously tailored to secure and grow your
-          business in an ever-evolving regulatory landscape.
+          Based in Thodupuzha, Kerala, our firm provides services in
+          accordance with applicable laws and regulations to secure and support your operations.
         </p>
         <p>
           Led by <span class="gold">CA Poly John FCA</span>, a Fellow of the Institute of
-          Chartered Accountants of India, we bring deep expertise and a personal commitment
-          to every engagement — from individual ITR filings to large-scale corporate audits.
+          Chartered Accountants of India, the firm handles assignments relating to individuals, firms and companies.
         </p>
       </div>
     </div>
@@ -935,15 +924,12 @@
 
 <section id="services" class="section">
   <div class="s-inner">
-    <div class="services-header">
-      <div class="reveal">
-        <div class="s-eyebrow"><span>What We Do</span></div>
-        <h2 class="s-title">Our <em>Services</em></h2>
-      </div>
-      <p class="services-desc reveal delay-2">
-        From meticulous bookkeeping to high-stakes corporate audits,
-        our suite of services is engineered to ensure your complete
-        financial compliance and strategic advantage.
+    <div class="services-header reveal">
+      <div class="s-eyebrow"><span>What We Do</span></div>
+      <h2 class="s-title">Our <em>Services</em></h2>
+      <p class="services-desc delay-1">
+        The firm provides accounting, auditing and taxation services
+        in accordance with applicable laws and professional standards.
       </p>
     </div>
 
@@ -966,7 +952,7 @@
       <div class="svc-card">
         <div class="svc-num">03</div>
         <div class="svc-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-        <div class="svc-title">Income Tax Return</div>
+        <div class="svc-title">Income Tax Return Filing</div>
         <div class="svc-desc">Seamless preparation and filing of income tax returns for individuals and businesses, optimising every permissible deduction.</div>
       </div>
 
@@ -974,7 +960,7 @@
         <div class="svc-num">04</div>
         <div class="svc-icon"><i class="fas fa-percent"></i></div>
         <div class="svc-title">GST Return Filing</div>
-        <div class="svc-desc">Timely and accurate Goods & Services Tax calculations and filings, ensuring zero penalties and full regulatory adherence.</div>
+        <div class="svc-desc">Timely and accurate Goods & Services Tax calculations and filings, aimed at compliance with applicable statutory requirements.</div>
       </div>
 
       <div class="svc-card">
@@ -986,13 +972,6 @@
 
       <div class="svc-card">
         <div class="svc-num">06</div>
-        <div class="svc-icon"><i class="fas fa-file-signature"></i></div>
-        <div class="svc-title">ITR Filing</div>
-        <div class="svc-desc">Dedicated, end-to-end assistance with all forms of Income Tax Return documentation for individuals, HUFs, and firms.</div>
-      </div>
-
-      <div class="svc-card">
-        <div class="svc-num">07</div>
         <div class="svc-icon"><i class="fas fa-chart-line"></i></div>
         <div class="svc-title">Project Reports</div>
         <div class="svc-desc">Detailed, bankable project reports for financing, business expansions, and new venture launches that satisfy lenders and investors.</div>
@@ -1005,36 +984,42 @@
 <section id="clients" class="section dark">
   <div class="s-inner">
     <div class="clients-intro reveal">
-      <div class="s-eyebrow"><span>Our Clients</span></div>
-      <h2 class="s-title">Distinguished <em>Clientele</em></h2>
+      <div class="s-eyebrow"><span>Experience</span></div>
+      <h2 class="s-title">Areas of <em>Work</em></h2>
       <p>
-        Trusted by industry leaders to manage their most complex
-        financial compliance. Our portfolio includes some of Kerala's
-        most prominent corporations.
+        The firm has experience in providing professional services
+        to clients across various sectors.
       </p>
     </div>
 
     <div class="clients-row">
 
       <div class="client-card reveal delay-1">
-        <div class="cc-icon"><i class="fas fa-industry"></i></div>
-        <div class="cc-tag">Diversified Conglomerate</div>
-        <div class="cc-name">EVM Enterprises Pvt Ltd</div>
-        <div class="cc-sub">One of Kerala's prominent diversified business groups, spanning multiple industries across the region.</div>
+        <div class="cc-icon"><i class="fas fa-university"></i></div>
+        <div class="cc-tag">Financial Sector</div>
+        <div class="cc-name">Bank Auditing</div>
+        <div class="cc-sub">Experience in conducting statutory, concurrent, and internal audits for banks and financial institutions.</div>
       </div>
 
       <div class="client-card reveal delay-2">
-        <div class="cc-icon"><i class="fas fa-concierge-bell"></i></div>
-        <div class="cc-tag">Hospitality & Tourism</div>
-        <div class="cc-name">Edakkattukudiyil Resorts Pvt Ltd</div>
-        <div class="cc-sub">A leading hospitality and tourism enterprise, setting benchmarks in Kerala's resort and leisure sector.</div>
+        <div class="cc-icon"><i class="fas fa-industry"></i></div>
+        <div class="cc-tag">Business Entities</div>
+        <div class="cc-name">Corporate & Firms</div>
+        <div class="cc-sub">Services provided to companies and partnership firms in various sectors.</div>
       </div>
 
       <div class="client-card reveal delay-3">
+        <div class="cc-icon"><i class="fas fa-concierge-bell"></i></div>
+        <div class="cc-tag">Hospitality Sector</div>
+        <div class="cc-name">Tourism & Services</div>
+        <div class="cc-sub">Experience in handling assignments relating to hospitality and service industries.</div>
+      </div>
+
+      <div class="client-card reveal delay-4">
         <div class="cc-icon"><i class="fas fa-cogs"></i></div>
         <div class="cc-tag">Manufacturing</div>
-        <div class="cc-name">Hillvalley Rubbers Pvt Ltd</div>
-        <div class="cc-sub">One of the prominent players in Kerala's rubber manufacturing and processing industry.</div>
+        <div class="cc-name">Industrial Units</div>
+        <div class="cc-sub">Professional services provided to manufacturing and processing units.</div>
       </div>
 
     </div>
@@ -1098,6 +1083,9 @@
     <div class="footer-brand"> <span>Poly John</span> & Company</div>
     <div class="footer-copy">© <span id="year"></span>Poly John & Company · All Rights Reserved · Chartered Accountants, Kerala</div>
   </div>
+  <div style="text-align:center; font-size:12px; color:#888; margin-top:10px; padding-bottom: 20px;">
+    This website is for informational purposes only and does not constitute solicitation or advertisement.
+  </div>
 </footer>
 
 <script>
@@ -1158,6 +1146,4 @@
   function closeMobile() { mob.classList.remove('open'); }
 </script>
 </body>
-
 </html>
-
